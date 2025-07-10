@@ -1,0 +1,72 @@
+ {
+  "T-Shirt": {
+    "Wash and Fold": 166,
+    "Dry Cleaning": 415,
+    "Ironing/Pressing": 125,
+    "Stain Removal": 249,
+    "Wash+Iron+Fold": 249
+  },
+  "Dress Shirt": {
+    "Wash and Fold": 208,
+    "Dry Cleaning": 498,
+    "Ironing/Pressing": 166,
+    "Stain Removal": 291,
+    "Wash+Iron+Fold": 332
+  },
+  "Pants/Jeans": {
+    "Wash and Fold": 249,
+    "Dry Cleaning": 581,
+    "Ironing/Pressing": 208,
+    "Stain Removal": 332,
+    "Wash+Iron+Fold": 374
+  },
+  "Dress": {
+    "Wash and Fold": 415,
+    "Dry Cleaning": 996,
+    "Ironing/Pressing": 332,
+    "Stain Removal": 498,
+    "Wash+Iron+Fold": 581
+  },
+  "Jacket": {
+    "Wash and Fold": 498,
+    "Dry Cleaning": 1245,
+    "Ironing/Pressing": 415,
+    "Stain Removal": 581,
+    "Wash+Iron+Fold": 664
+  },
+  "Suit (2-piece)": {
+    "Wash and Fold": 664,
+    "Dry Cleaning": 1660,
+    "Ironing/Pressing": 581,
+    "Stain Removal": 830,
+    "Wash+Iron+Fold": 996
+  },
+  "Sweater": {
+    "Wash and Fold": 332,
+    "Dry Cleaning": 830,
+    "Ironing/Pressing": 249,
+    "Stain Removal": 415,
+    "Wash+Iron+Fold": 498
+  },
+  "Bed Sheet (Single)": {
+    "Wash and Fold": 415,
+    "Dry Cleaning": 996,
+    "Ironing/Pressing": 291,
+    "Stain Removal": 498,
+    "Wash+Iron+Fold": 581
+  },
+  "Tablecloth": {
+    "Wash and Fold": 498,
+    "Dry Cleaning": 1162,
+    "Ironing/Pressing": 332,
+    "Stain Removal": 581,
+    "Wash+Iron+Fold": 664
+  },
+  "Curtain (per panel)": {
+    "Wash and Fold": 581,
+    "Dry Cleaning": 1494,
+    "Ironing/Pressing": 415,
+    "Stain Removal": 664,
+    "Wash+Iron+Fold": 747
+  }
+ }

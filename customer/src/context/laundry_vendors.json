@@ -1,0 +1,774 @@
+{
+  "vendors": [
+    {
+      "name": "SparkleClean Laundry",
+      "location": "123 MG Road, Pune",
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi3-t-o8s7EVXcKMyBYK7Id9HVVCwy48Ojfw&s",
+      "services": {
+        "T-Shirt": {
+          "Wash and Fold": 160,
+          "Dry Cleaning": 360,
+          "Ironing/Pressing": 141,
+          "Stain Removal": 222,
+          "Wash+Iron+Fold": 237
+        },
+        "Dress Shirt": {
+          "Wash and Fold": 201,
+          "Dry Cleaning": 466,
+          "Ironing/Pressing": 168,
+          "Stain Removal": 302,
+          "Wash+Iron+Fold": 308
+        },
+        "Pants/Jeans": {
+          "Wash and Fold": 264,
+          "Dry Cleaning": 612,
+          "Ironing/Pressing": 198,
+          "Stain Removal": 313,
+          "Wash+Iron+Fold": 343
+        },
+        "Dress": {
+          "Wash and Fold": 439,
+          "Dry Cleaning": 921,
+          "Ironing/Pressing": 355,
+          "Stain Removal": 481,
+          "Wash+Iron+Fold": 525
+        },
+        "Jacket": {
+          "Wash and Fold": 438,
+          "Dry Cleaning": 1306,
+          "Ironing/Pressing": 386,
+          "Stain Removal": 572,
+          "Wash+Iron+Fold": 672
+        },
+        "Suit (2-piece)": {
+          "Wash and Fold": 703,
+          "Dry Cleaning": 1694,
+          "Ironing/Pressing": 586,
+          "Stain Removal": 785,
+          "Wash+Iron+Fold": 1124
+        },
+        "Sweater": {
+          "Wash and Fold": 370,
+          "Dry Cleaning": 914,
+          "Ironing/Pressing": 263,
+          "Stain Removal": 434,
+          "Wash+Iron+Fold": 482
+        },
+        "Bed Sheet (Single)": {
+          "Wash and Fold": 381,
+          "Dry Cleaning": 871,
+          "Ironing/Pressing": 286,
+          "Stain Removal": 548,
+          "Wash+Iron+Fold": 626
+        },
+        "Tablecloth": {
+          "Wash and Fold": 543,
+          "Dry Cleaning": 1049,
+          "Ironing/Pressing": 288,
+          "Stain Removal": 560,
+          "Wash+Iron+Fold": 611
+        },
+        "Curtain (per panel)": {
+          "Wash and Fold": 643,
+          "Dry Cleaning": 1641,
+          "Ironing/Pressing": 415,
+          "Stain Removal": 602,
+          "Wash+Iron+Fold": 722
+        }
+      }
+    },
+    {
+      "name": "UrbanWash Express",
+      "location": "56 Indiranagar, Bangalore",
+      "image_url": "https://static.vecteezy.com/system/resources/previews/040/261/632/non_2x/ai-generated-modern-laundromat-with-row-of-washing-machines-with-ai-generated-free-photo.jpeg",
+      "services": {
+        "T-Shirt": {
+          "Wash and Fold": 161,
+          "Dry Cleaning": 401,
+          "Ironing/Pressing": 107,
+          "Stain Removal": 222,
+          "Wash+Iron+Fold": 277
+        },
+        "Dress Shirt": {
+          "Wash and Fold": 212,
+          "Dry Cleaning": 525,
+          "Ironing/Pressing": 171,
+          "Stain Removal": 255,
+          "Wash+Iron+Fold": 317
+        },
+        "Pants/Jeans": {
+          "Wash and Fold": 253,
+          "Dry Cleaning": 637,
+          "Ironing/Pressing": 208,
+          "Stain Removal": 289,
+          "Wash+Iron+Fold": 371
+        },
+        "Dress": {
+          "Wash and Fold": 359,
+          "Dry Cleaning": 1092,
+          "Ironing/Pressing": 309,
+          "Stain Removal": 536,
+          "Wash+Iron+Fold": 622
+        },
+        "Jacket": {
+          "Wash and Fold": 512,
+          "Dry Cleaning": 1226,
+          "Ironing/Pressing": 466,
+          "Stain Removal": 570,
+          "Wash+Iron+Fold": 629
+        },
+        "Suit (2-piece)": {
+          "Wash and Fold": 640,
+          "Dry Cleaning": 1604,
+          "Ironing/Pressing": 618,
+          "Stain Removal": 725,
+          "Wash+Iron+Fold": 937
+        },
+        "Sweater": {
+          "Wash and Fold": 364,
+          "Dry Cleaning": 875,
+          "Ironing/Pressing": 260,
+          "Stain Removal": 361,
+          "Wash+Iron+Fold": 472
+        },
+        "Bed Sheet (Single)": {
+          "Wash and Fold": 405,
+          "Dry Cleaning": 1036,
+          "Ironing/Pressing": 327,
+          "Stain Removal": 555,
+          "Wash+Iron+Fold": 633
+        },
+        "Tablecloth": {
+          "Wash and Fold": 423,
+          "Dry Cleaning": 1042,
+          "Ironing/Pressing": 293,
+          "Stain Removal": 506,
+          "Wash+Iron+Fold": 730
+        },
+        "Curtain (per panel)": {
+          "Wash and Fold": 617,
+          "Dry Cleaning": 1400,
+          "Ironing/Pressing": 373,
+          "Stain Removal": 644,
+          "Wash+Iron+Fold": 727
+        }
+      }
+    },
+    {
+      "name": "QuickFresh Laundry",
+      "location": "201 Marina Street, Chennai",
+      "image_url": "data:image/jpeg;base64,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",
+      "services": {
+        "T-Shirt": {
+          "Wash and Fold": 172,
+          "Dry Cleaning": 465,
+          "Ironing/Pressing": 109,
+          "Stain Removal": 278,
+          "Wash+Iron+Fold": 212
+        },
+        "Dress Shirt": {
+          "Wash and Fold": 211,
+          "Dry Cleaning": 501,
+          "Ironing/Pressing": 164,
+          "Stain Removal": 252,
+          "Wash+Iron+Fold": 311
+        },
+        "Pants/Jeans": {
+          "Wash and Fold": 245,
+          "Dry Cleaning": 541,
+          "Ironing/Pressing": 180,
+          "Stain Removal": 326,
+          "Wash+Iron+Fold": 352
+        },
+        "Dress": {
+          "Wash and Fold": 431,
+          "Dry Cleaning": 962,
+          "Ironing/Pressing": 343,
+          "Stain Removal": 497,
+          "Wash+Iron+Fold": 622
+        },
+        "Jacket": {
+          "Wash and Fold": 492,
+          "Dry Cleaning": 1164,
+          "Ironing/Pressing": 420,
+          "Stain Removal": 542,
+          "Wash+Iron+Fold": 648
+        },
+        "Suit (2-piece)": {
+          "Wash and Fold": 704,
+          "Dry Cleaning": 1557,
+          "Ironing/Pressing": 578,
+          "Stain Removal": 863,
+          "Wash+Iron+Fold": 880
+        },
+        "Sweater": {
+          "Wash and Fold": 344,
+          "Dry Cleaning": 921,
+          "Ironing/Pressing": 214,
+          "Stain Removal": 432,
+          "Wash+Iron+Fold": 523
+        },
+        "Bed Sheet (Single)": {
+          "Wash and Fold": 450,
+          "Dry Cleaning": 886,
+          "Ironing/Pressing": 271,
+          "Stain Removal": 510,
+          "Wash+Iron+Fold": 591
+        },
+        "Tablecloth": {
+          "Wash and Fold": 568,
+          "Dry Cleaning": 1124,
+          "Ironing/Pressing": 355,
+          "Stain Removal": 629,
+          "Wash+Iron+Fold": 716
+        },
+        "Curtain (per panel)": {
+          "Wash and Fold": 526,
+          "Dry Cleaning": 1537,
+          "Ironing/Pressing": 402,
+          "Stain Removal": 760,
+          "Wash+Iron+Fold": 784
+        }
+      }
+    },
+    {
+      "name": "EcoBubble Laundry Hub",
+      "location": "78 Sector 21, Chandigarh",
+      "image_url": "data:image/jpeg;base64,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",
+      "services": {
+        "T-Shirt": {
+          "Wash and Fold": 168,
+          "Dry Cleaning": 436,
+          "Ironing/Pressing": 136,
+          "Stain Removal": 241,
+          "Wash+Iron+Fold": 233
+        },
+        "Dress Shirt": {
+          "Wash and Fold": 214,
+          "Dry Cleaning": 502,
+          "Ironing/Pressing": 146,
+          "Stain Removal": 292,
+          "Wash+Iron+Fold": 299
+        },
+        "Pants/Jeans": {
+          "Wash and Fold": 212,
+          "Dry Cleaning": 663,
+          "Ironing/Pressing": 183,
+          "Stain Removal": 348,
+          "Wash+Iron+Fold": 422
+        },
+        "Dress": {
+          "Wash and Fold": 450,
+          "Dry Cleaning": 849,
+          "Ironing/Pressing": 309,
+          "Stain Removal": 473,
+          "Wash+Iron+Fold": 554
+        },
+        "Jacket": {
+          "Wash and Fold": 469,
+          "Dry Cleaning": 1191,
+          "Ironing/Pressing": 436,
+          "Stain Removal": 534,
+          "Wash+Iron+Fold": 707
+        },
+        "Suit (2-piece)": {
+          "Wash and Fold": 730,
+          "Dry Cleaning": 1729,
+          "Ironing/Pressing": 531,
+          "Stain Removal": 714,
+          "Wash+Iron+Fold": 1011
+        },
+        "Sweater": {
+          "Wash and Fold": 331,
+          "Dry Cleaning": 711,
+          "Ironing/Pressing": 280,
+          "Stain Removal": 382,
+          "Wash+Iron+Fold": 551
+        },
+        "Bed Sheet (Single)": {
+          "Wash and Fold": 370,
+          "Dry Cleaning": 1016,
+          "Ironing/Pressing": 278,
+          "Stain Removal": 470,
+          "Wash+Iron+Fold": 596
+        },
+        "Tablecloth": {
+          "Wash and Fold": 440,
+          "Dry Cleaning": 1015,
+          "Ironing/Pressing": 302,
+          "Stain Removal": 563,
+          "Wash+Iron+Fold": 629
+        },
+        "Curtain (per panel)": {
+          "Wash and Fold": 524,
+          "Dry Cleaning": 1545,
+          "Ironing/Pressing": 395,
+          "Stain Removal": 681,
+          "Wash+Iron+Fold": 682
+        }
+      }
+    },
+    {
+      "name": "WashMate Services",
+      "location": "45 Ring Road, Surat",
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGpKxF0x_RMg13fKK5kZ3hAkhHyBQ8b4i90g&s",
+      "services": {
+        "T-Shirt": {
+          "Wash and Fold": 153,
+          "Dry Cleaning": 453,
+          "Ironing/Pressing": 141,
+          "Stain Removal": 256,
+          "Wash+Iron+Fold": 259
+        },
+        "Dress Shirt": {
+          "Wash and Fold": 238,
+          "Dry Cleaning": 434,
+          "Ironing/Pressing": 169,
+          "Stain Removal": 256,
+          "Wash+Iron+Fold": 290
+        },
+        "Pants/Jeans": {
+          "Wash and Fold": 274,
+          "Dry Cleaning": 562,
+          "Ironing/Pressing": 177,
+          "Stain Removal": 284,
+          "Wash+Iron+Fold": 416
+        },
+        "Dress": {
+          "Wash and Fold": 355,
+          "Dry Cleaning": 1060,
+          "Ironing/Pressing": 379,
+          "Stain Removal": 557,
+          "Wash+Iron+Fold": 647
+        },
+        "Jacket": {
+          "Wash and Fold": 432,
+          "Dry Cleaning": 1170,
+          "Ironing/Pressing": 402,
+          "Stain Removal": 534,
+          "Wash+Iron+Fold": 629
+        },
+        "Suit (2-piece)": {
+          "Wash and Fold": 612,
+          "Dry Cleaning": 1731,
+          "Ironing/Pressing": 582,
+          "Stain Removal": 837,
+          "Wash+Iron+Fold": 997
+        },
+        "Sweater": {
+          "Wash and Fold": 352,
+          "Dry Cleaning": 882,
+          "Ironing/Pressing": 237,
+          "Stain Removal": 372,
+          "Wash+Iron+Fold": 480
+        },
+        "Bed Sheet (Single)": {
+          "Wash and Fold": 472,
+          "Dry Cleaning": 1019,
+          "Ironing/Pressing": 280,
+          "Stain Removal": 557,
+          "Wash+Iron+Fold": 641
+        },
+        "Tablecloth": {
+          "Wash and Fold": 569,
+          "Dry Cleaning": 1176,
+          "Ironing/Pressing": 376,
+          "Stain Removal": 617,
+          "Wash+Iron+Fold": 677
+        },
+        "Curtain (per panel)": {
+          "Wash and Fold": 524,
+          "Dry Cleaning": 1632,
+          "Ironing/Pressing": 402,
+          "Stain Removal": 738,
+          "Wash+Iron+Fold": 796
+        }
+      }
+    },
+    {
+      "name": "LuxeLaundry Co.",
+      "location": "89 Park Street, Kolkata",
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbbWzC634JQ4dfvm9dRXsPZV0gMQrNHWbR2Q&s",
+      "services": {
+        "T-Shirt": {
+          "Wash and Fold": 160,
+          "Dry Cleaning": 441,
+          "Ironing/Pressing": 131,
+          "Stain Removal": 267,
+          "Wash+Iron+Fold": 250
+        },
+        "Dress Shirt": {
+          "Wash and Fold": 224,
+          "Dry Cleaning": 472,
+          "Ironing/Pressing": 151,
+          "Stain Removal": 332,
+          "Wash+Iron+Fold": 311
+        },
+        "Pants/Jeans": {
+          "Wash and Fold": 281,
+          "Dry Cleaning": 548,
+          "Ironing/Pressing": 227,
+          "Stain Removal": 369,
+          "Wash+Iron+Fold": 327
+        },
+        "Dress": {
+          "Wash and Fold": 411,
+          "Dry Cleaning": 1033,
+          "Ironing/Pressing": 336,
+          "Stain Removal": 525,
+          "Wash+Iron+Fold": 522
+        },
+        "Jacket": {
+          "Wash and Fold": 428,
+          "Dry Cleaning": 1369,
+          "Ironing/Pressing": 443,
+          "Stain Removal": 598,
+          "Wash+Iron+Fold": 743
+        },
+        "Suit (2-piece)": {
+          "Wash and Fold": 652,
+          "Dry Cleaning": 1807,
+          "Ironing/Pressing": 551,
+          "Stain Removal": 944,
+          "Wash+Iron+Fold": 993
+        },
+        "Sweater": {
+          "Wash and Fold": 361,
+          "Dry Cleaning": 882,
+          "Ironing/Pressing": 262,
+          "Stain Removal": 366,
+          "Wash+Iron+Fold": 525
+        },
+        "Bed Sheet (Single)": {
+          "Wash and Fold": 426,
+          "Dry Cleaning": 868,
+          "Ironing/Pressing": 264,
+          "Stain Removal": 483,
+          "Wash+Iron+Fold": 594
+        },
+        "Tablecloth": {
+          "Wash and Fold": 525,
+          "Dry Cleaning": 990,
+          "Ironing/Pressing": 307,
+          "Stain Removal": 623,
+          "Wash+Iron+Fold": 749
+        },
+        "Curtain (per panel)": {
+          "Wash and Fold": 574,
+          "Dry Cleaning": 1330,
+          "Ironing/Pressing": 427,
+          "Stain Removal": 753,
+          "Wash+Iron+Fold": 660
+        }
+      }
+    },
+    {
+      "name": "BrightWash Solutions",
+      "location": "67 GT Road, Amritsar",
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc6BFabb48MYbN0tZ_-TYAVfA1-K6Q3-VESw&s",
+      "services": {
+        "T-Shirt": {
+          "Wash and Fold": 152,
+          "Dry Cleaning": 389,
+          "Ironing/Pressing": 119,
+          "Stain Removal": 261,
+          "Wash+Iron+Fold": 237
+        },
+        "Dress Shirt": {
+          "Wash and Fold": 187,
+          "Dry Cleaning": 537,
+          "Ironing/Pressing": 146,
+          "Stain Removal": 250,
+          "Wash+Iron+Fold": 347
+        },
+        "Pants/Jeans": {
+          "Wash and Fold": 224,
+          "Dry Cleaning": 545,
+          "Ironing/Pressing": 213,
+          "Stain Removal": 311,
+          "Wash+Iron+Fold": 367
+        },
+        "Dress": {
+          "Wash and Fold": 396,
+          "Dry Cleaning": 1134,
+          "Ironing/Pressing": 366,
+          "Stain Removal": 485,
+          "Wash+Iron+Fold": 630
+        },
+        "Jacket": {
+          "Wash and Fold": 462,
+          "Dry Cleaning": 1112,
+          "Ironing/Pressing": 396,
+          "Stain Removal": 642,
+          "Wash+Iron+Fold": 734
+        },
+        "Suit (2-piece)": {
+          "Wash and Fold": 583,
+          "Dry Cleaning": 1632,
+          "Ironing/Pressing": 627,
+          "Stain Removal": 763,
+          "Wash+Iron+Fold": 1042
+        },
+        "Sweater": {
+          "Wash and Fold": 359,
+          "Dry Cleaning": 893,
+          "Ironing/Pressing": 245,
+          "Stain Removal": 398,
+          "Wash+Iron+Fold": 559
+        },
+        "Bed Sheet (Single)": {
+          "Wash and Fold": 469,
+          "Dry Cleaning": 1016,
+          "Ironing/Pressing": 283,
+          "Stain Removal": 483,
+          "Wash+Iron+Fold": 495
+        },
+        "Tablecloth": {
+          "Wash and Fold": 455,
+          "Dry Cleaning": 1114,
+          "Ironing/Pressing": 328,
+          "Stain Removal": 517,
+          "Wash+Iron+Fold": 575
+        },
+        "Curtain (per panel)": {
+          "Wash and Fold": 497,
+          "Dry Cleaning": 1502,
+          "Ironing/Pressing": 404,
+          "Stain Removal": 629,
+          "Wash+Iron+Fold": 677
+        }
+      }
+    },
+    {
+      "name": "SpeedySteam Laundry",
+      "location": "33 City Center, Jaipur",
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT-pvAaCljWs-7R8tPESevL0yEW4B7VrnsRg&s",
+      "services": {
+        "T-Shirt": {
+          "Wash and Fold": 179,
+          "Dry Cleaning": 413,
+          "Ironing/Pressing": 124,
+          "Stain Removal": 232,
+          "Wash+Iron+Fold": 266
+        },
+        "Dress Shirt": {
+          "Wash and Fold": 188,
+          "Dry Cleaning": 458,
+          "Ironing/Pressing": 151,
+          "Stain Removal": 257,
+          "Wash+Iron+Fold": 372
+        },
+        "Pants/Jeans": {
+          "Wash and Fold": 279,
+          "Dry Cleaning": 623,
+          "Ironing/Pressing": 236,
+          "Stain Removal": 317,
+          "Wash+Iron+Fold": 392
+        },
+        "Dress": {
+          "Wash and Fold": 439,
+          "Dry Cleaning": 1062,
+          "Ironing/Pressing": 357,
+          "Stain Removal": 513,
+          "Wash+Iron+Fold": 510
+        },
+        "Jacket": {
+          "Wash and Fold": 555,
+          "Dry Cleaning": 1126,
+          "Ironing/Pressing": 364,
+          "Stain Removal": 623,
+          "Wash+Iron+Fold": 640
+        },
+        "Suit (2-piece)": {
+          "Wash and Fold": 704,
+          "Dry Cleaning": 1731,
+          "Ironing/Pressing": 587,
+          "Stain Removal": 914,
+          "Wash+Iron+Fold": 1018
+        },
+        "Sweater": {
+          "Wash and Fold": 360,
+          "Dry Cleaning": 722,
+          "Ironing/Pressing": 255,
+          "Stain Removal": 392,
+          "Wash+Iron+Fold": 559
+        },
+        "Bed Sheet (Single)": {
+          "Wash and Fold": 424,
+          "Dry Cleaning": 976,
+          "Ironing/Pressing": 271,
+          "Stain Removal": 518,
+          "Wash+Iron+Fold": 655
+        },
+        "Tablecloth": {
+          "Wash and Fold": 502,
+          "Dry Cleaning": 1031,
+          "Ironing/Pressing": 323,
+          "Stain Removal": 593,
+          "Wash+Iron+Fold": 630
+        },
+        "Curtain (per panel)": {
+          "Wash and Fold": 655,
+          "Dry Cleaning": 1700,
+          "Ironing/Pressing": 416,
+          "Stain Removal": 746,
+          "Wash+Iron+Fold": 698
+        }
+      }
+    },
+    {
+      "name": "Prime Laundry Care",
+      "location": "101 Lake View, Bhopal",
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa1BckA7TQ9QnOvbw8C_oWttzR--QkXTw2FA&s",
+      "services": {
+        "T-Shirt": {
+          "Wash and Fold": 141,
+          "Dry Cleaning": 410,
+          "Ironing/Pressing": 140,
+          "Stain Removal": 250,
+          "Wash+Iron+Fold": 262
+        },
+        "Dress Shirt": {
+          "Wash and Fold": 194,
+          "Dry Cleaning": 551,
+          "Ironing/Pressing": 166,
+          "Stain Removal": 304,
+          "Wash+Iron+Fold": 328
+        },
+        "Pants/Jeans": {
+          "Wash and Fold": 275,
+          "Dry Cleaning": 551,
+          "Ironing/Pressing": 201,
+          "Stain Removal": 310,
+          "Wash+Iron+Fold": 353
+        },
+        "Dress": {
+          "Wash and Fold": 369,
+          "Dry Cleaning": 896,
+          "Ironing/Pressing": 301,
+          "Stain Removal": 527,
+          "Wash+Iron+Fold": 567
+        },
+        "Jacket": {
+          "Wash and Fold": 516,
+          "Dry Cleaning": 1161,
+          "Ironing/Pressing": 412,
+          "Stain Removal": 617,
+          "Wash+Iron+Fold": 573
+        },
+        "Suit (2-piece)": {
+          "Wash and Fold": 576,
+          "Dry Cleaning": 1442,
+          "Ironing/Pressing": 499,
+          "Stain Removal": 743,
+          "Wash+Iron+Fold": 909
+        },
+        "Sweater": {
+          "Wash and Fold": 346,
+          "Dry Cleaning": 935,
+          "Ironing/Pressing": 221,
+          "Stain Removal": 397,
+          "Wash+Iron+Fold": 476
+        },
+        "Bed Sheet (Single)": {
+          "Wash and Fold": 402,
+          "Dry Cleaning": 852,
+          "Ironing/Pressing": 307,
+          "Stain Removal": 529,
+          "Wash+Iron+Fold": 569
+        },
+        "Tablecloth": {
+          "Wash and Fold": 556,
+          "Dry Cleaning": 1137,
+          "Ironing/Pressing": 374,
+          "Stain Removal": 613,
+          "Wash+Iron+Fold": 732
+        },
+        "Curtain (per panel)": {
+          "Wash and Fold": 542,
+          "Dry Cleaning": 1447,
+          "Ironing/Pressing": 411,
+          "Stain Removal": 750,
+          "Wash+Iron+Fold": 683
+        }
+      }
+    },
+    {
+      "name": "FreshFold Laundry",
+      "location": "10 Green Park, Delhi",
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMkinCP7IkCWSOKMBw-pwmtaVBA3-zjgJlXA&s",
+      "services": {
+        "T-Shirt": {
+          "Wash and Fold": 163,
+          "Dry Cleaning": 472,
+          "Ironing/Pressing": 137,
+          "Stain Removal": 231,
+          "Wash+Iron+Fold": 283
+        },
+        "Dress Shirt": {
+          "Wash and Fold": 190,
+          "Dry Cleaning": 451,
+          "Ironing/Pressing": 176,
+          "Stain Removal": 287,
+          "Wash+Iron+Fold": 360
+        },
+        "Pants/Jeans": {
+          "Wash and Fold": 232,
+          "Dry Cleaning": 614,
+          "Ironing/Pressing": 220,
+          "Stain Removal": 328,
+          "Wash+Iron+Fold": 425
+        },
+        "Dress": {
+          "Wash and Fold": 380,
+          "Dry Cleaning": 1133,
+          "Ironing/Pressing": 310,
+          "Stain Removal": 506,
+          "Wash+Iron+Fold": 610
+        },
+        "Jacket": {
+          "Wash and Fold": 439,
+          "Dry Cleaning": 1218,
+          "Ironing/Pressing": 359,
+          "Stain Removal": 510,
+          "Wash+Iron+Fold": 697
+        },
+        "Suit (2-piece)": {
+          "Wash and Fold": 638,
+          "Dry Cleaning": 1641,
+          "Ironing/Pressing": 548,
+          "Stain Removal": 875,
+          "Wash+Iron+Fold": 1025
+        },
+        "Sweater": {
+          "Wash and Fold": 353,
+          "Dry Cleaning": 892,
+          "Ironing/Pressing": 219,
+          "Stain Removal": 389,
+          "Wash+Iron+Fold": 444
+        },
+        "Bed Sheet (Single)": {
+          "Wash and Fold": 447,
+          "Dry Cleaning": 1067,
+          "Ironing/Pressing": 306,
+          "Stain Removal": 476,
+          "Wash+Iron+Fold": 566
+        },
+        "Tablecloth": {
+          "Wash and Fold": 565,
+          "Dry Cleaning": 1113,
+          "Ironing/Pressing": 359,
+          "Stain Removal": 569,
+          "Wash+Iron+Fold": 668
+        },
+        "Curtain (per panel)": {
+          "Wash and Fold": 616,
+          "Dry Cleaning": 1517,
+          "Ironing/Pressing": 462,
+          "Stain Removal": 565,
+          "Wash+Iron+Fold": 803
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+.laundry-footer {
+  width: 100%;
+  background-color: #210649; /* royal purple */
+  color: white;
+  padding: 60px 20px 40px;  /* 👈 increased top and bottom padding */
+  font-family: sans-serif;
+  box-sizing: border-box;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  min-height: 220px; /* 👈 optional: ensures minimum height */
+}
+
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-left h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.footer-left p {
+  margin-top: 6px;
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+.footer-right p {
+  margin: 6px 0;
+  font-size: 15px;
+  text-align: right;
+}
+
+.footer-right a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+}
+
+/* New Quick Links section */
+.footer-links {
+  min-width: 150px;
+}
+
+.footer-links h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.footer-logo {
+  height: 50px;
+  width: auto;
+  margin-bottom: 10px;
+}
+

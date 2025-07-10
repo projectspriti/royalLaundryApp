@@ -1,0 +1,382 @@
+/* .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  color: #333;
+}
+
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+.order-table th,
+.order-table td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.vendor-info h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.vendor-info p {
+  margin: 0.25rem 0;
+  color: #555;
+}
+
+.modal-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.confirm-btn {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cancel-btn {
+  background-color: #aaa;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.total-quantity {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  color: #444;
+} */
+/* 
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+
+.modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 650px;
+  width: 90%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content h2 {
+  margin-bottom: 1.2rem;
+  font-size: 1.8rem;
+  color: #333;
+  text-align: center;
+}
+
+
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  background-color: #fdfdfd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.order-table th,
+.order-table td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+}
+
+.order-table th {
+  background-color: #f0f0f0;
+  color: #555;
+  font-weight: bold;
+}
+
+
+.total-quantity {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  font-weight: 600;
+  color: #444;
+}
+
+
+.vendor-info {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.vendor-info h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.vendor-info p {
+  margin: 0.25rem 0;
+  color: #555;
+  font-size: 1rem;
+}
+
+.modal-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+
+.confirm-btn {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.confirm-btn:hover {
+  background-color: #1976d2;
+}
+
+.cancel-btn {
+  background-color: #aaa;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.cancel-btn:hover {
+  background-color: #888;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+} */
+
+
+/* Modal background overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* Modal content box */
+.modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 650px;
+  width: 90%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease;
+}
+
+/* Modal title */
+.modal-content h2 {
+  margin-bottom: 1.2rem;
+  font-size: 1.8rem;
+  color: #333;
+  text-align: center;
+}
+
+/* Table styling */
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  background-color: #fdfdfd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.order-table th,
+.order-table td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+}
+
+.order-table th {
+  background-color: #f0f0f0;
+  color: #555;
+  font-weight: bold;
+}
+
+/* Total Quantity */
+.total-quantity {
+  font-size: 1.15rem;
+  margin: 1rem 0;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  background-color: #e3f2fd;
+  border-left: 4px solid #2196f3;
+  border-radius: 6px;
+  color: #0d47a1;
+}
+
+/* Vendor Info Card */
+.vendor-info {
+  margin-top: 1.5rem;
+  padding: 1.2rem 1.5rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.vendor-info:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.vendor-info h3 {
+  font-size: 1.3rem;
+  color: #0d47a1;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #2196f3;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+.vendor-info p {
+  margin: 0.4rem 0;
+  font-size: 1.05rem;
+  color: #333;
+}
+
+.vendor-info p strong {
+  color: #1a237e;
+}
+
+.vendor-info p:last-child {
+  font-size: 1.2rem;
+  color:#1a237e;
+  font-weight: bold;
+  background-color: #e3f2fd;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+/* Action Buttons */
+.modal-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.confirm-btn {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.confirm-btn:hover {
+  background-color: #1976d2;
+}
+
+.cancel-btn {
+  background-color: #aaa;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.cancel-btn:hover {
+  background-color: #888;
+}
+
+/* Optional animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

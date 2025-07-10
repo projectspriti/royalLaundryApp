@@ -1,0 +1,13 @@
+# Ignore backend node_modules and .env
+/backend/node_modules
+/backend/.env
+
+# Ignore frontend node_modules
+/customer/node_modules
+
+# Logs
+*.log
+
+# System
+.DS_Store
+Thumbs.db
