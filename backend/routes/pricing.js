@@ -2,7 +2,7 @@
 const express = require('express');
 const router = express.Router();
 
-const db = require('../config/db');
+const db = require('../utils/db');
 
 // Insert new pricing record
 router.post('/', async (req, res) => {
@@ -13,7 +13,7 @@ router.post('/', async (req, res) => {
   }
 
   try {
-    const [result] = await db.query(
+    const result = await db.query(
       `INSERT INTO pricing (service_id, vendor_id, cloth_id, price) VALUES (?, ?, ?, ?)`,
       [service_id, vendor_id, cloth_id, price]
     );
@@ -31,7 +31,7 @@ router.post('/', async (req, res) => {
 // Retrieve all pricing records
 router.get('/', async (req, res) => {
   try {
-    const [rows] = await db.query(`
+    const rows = await db.query(`
       SELECT p.*, 
              s.name, 
              c.name
@@ -53,7 +53,7 @@ router.delete('/:id', async (req, res) => {
   const { id } = req.params;
 
   try {
-    const [result] = await db.query('DELETE FROM pricing WHERE pricing_id = ?', [id]);
+    const result = await db.query('DELETE FROM pricing WHERE pricing_id = ?', [id]);
 
     if (result.affectedRows === 0) {
       return res.status(404).json({ message: 'Pricing record not found' });

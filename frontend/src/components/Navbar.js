@@ -28,7 +28,7 @@ const Navbar = () => {
       {/* Auth Button */}
       <div style={styles.buttondiv}>
         <Link to="/login" style={styles.button}>Login</Link>
-        <Link to="/registration" style={styles.button1}>Register</Link>
+        <Link to="/register" style={styles.button1}>Register</Link>
       </div>
     </nav>
   );

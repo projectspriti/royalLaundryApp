@@ -11,3 +11,5 @@
 # System
 .DS_Store
 Thumbs.db
+.env
+node_modules

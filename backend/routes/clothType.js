@@ -1,17 +1,15 @@
-// routes/serviceRoutes.js
+// routes/clothTypeRoutes.js
 const express = require('express');
 const router = express.Router();
-
-
-const db = require('../config/db')
+const db = require('../utils/db')
 
 // insert data
 router.post('/', async (req, res) => {
     const { name, description } = req.body;
 
     try {
-        const [result] = await db.query(
-            'INSERT INTO services (name, description) VALUES (?, ?)',
+        const result = await db.query(
+            'INSERT INTO cloth_type (name, description) VALUES (?, ?)',
             [name, description]
         );
         res.status(201).json({
@@ -27,7 +25,7 @@ router.post('/', async (req, res) => {
 router.get('/', async (req, res) => {
 
     try {
-        const [rows] = await db.query('SELECT * FROM services');
+        const rows = await db.query('SELECT * FROM cloth_type');
         return res.json(rows)
     } catch (error) {
         return res.status(500).send(error.message)
@@ -36,11 +34,11 @@ router.get('/', async (req, res) => {
 });
 
 // delete data
-router.delete('service_id', async (req, res) => {
-    const { service_id } = req.params;
+router.delete('/:cloth_id', async (req, res) => {
+    const { cloth_id } = req.params;
 
     try {
-        const [result] = await db.query('DELETE FROM services WHERE clotservice_idh_id = ?', [service_id]);
+        const result = await db.query('DELETE FROM cloth_type WHERE cloth_id = ?', [cloth_id]);
 
         if (result.affectedRows === 0) {
             return res.status(404).json({ message: 'Cloth type not found' });
@@ -51,7 +49,6 @@ router.delete('service_id', async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 });
-
 
 
 module.exports = router;

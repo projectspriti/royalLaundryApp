@@ -1,22 +1,27 @@
 const express = require('express');
+const cors = require('cors')
 const app = express();
 require('dotenv').config();
 
 // Middleware
 app.use(express.json());
+app.use(cors())
 
+const service = require('./routes/service');
+const clothType = require('./routes/clothType');
+const vendor = require('./routes/vendor');
+const pricing = require('./routes/pricing');
+const locations = require('./routes/locations')
+const user = require('./routes/user')
+const otp = require('./routes/otp')
 
-const serviceRoutes = require('./routes/serviceRoute');
-const clothTypeRoutes = require('./routes/clothTypeRoute');
-const vendorRoutes = require('./routes/vendorRoute');
-const pricingRoutes = require('./routes/pricingRoute');
-
-
-app.use('/api/services', serviceRoutes);
-app.use('/api/cloth-types', clothTypeRoutes);
-app.use('/api/vendors', vendorRoutes);
-app.use('/api/pricing', pricingRoutes);
-
+app.use('/api/services', service);
+app.use('/api/cloth-types', clothType);
+app.use('/api/vendors', vendor);
+app.use('/api/pricing', pricing);
+app.use('/api/location', locations);
+app.use('/api/user', user);
+app.use('/api/otp', otp)
 
 app.get('/', (req, res) => {
   res.send('Laundry Service API is running');
