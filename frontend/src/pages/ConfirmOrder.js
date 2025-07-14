@@ -109,8 +109,8 @@ function ConfirmOrder({ selectedItems, vendor, total, onClose }) {
   const totalQuantity = selectedItems.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
-    <div className="modal-overlay">
-      <div className="modal-content">
+    <div className="modal-overlay" >
+      <div className="modal-content" style={{background:"white",borderRadius:"20px"}}>
         <h2>Order Summary</h2>
 
         {/* Order Table */}
