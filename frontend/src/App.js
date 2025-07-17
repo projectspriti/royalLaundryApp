@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Services from './pages/Services'
@@ -15,16 +15,27 @@ import SelectedList from './pages/SelectedList'
 
 
 const App = () => {
+
+  const [user, setUser] = React.useState({
+    email: "",
+    name: "",
+    phone:"",
+    usertype: "0"
+  })
+
+  useEffect(() => {
+    console.log(user);
+  }, [user]);
   return (
     <div>
-      <Navbar />
+      <Navbar user={user} setUser={setUser}/>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/services' element={<Services />} />
         <Route path='/orders' element={<Orders />} />
         <Route path='/profile' element={<Profile />} />
         <Route path='/book-order' element={<BookOrder />} />
-        <Route path='/login' element={<Signin />} />
+        <Route path='/login' element={<Signin setUser={setUser}/>} />
         <Route path='/register' element={<Signup />} />
         <Route path='/forgot-password'element={<ForgotPassword/>} />
         <Route path='/contact' element={<Contact />} />

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const Signin = () => {
+const Signin = ({setUser}) => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: "",
@@ -29,6 +29,17 @@ const Signin = () => {
 
       if (response.data.token) { 
         localStorage.setItem("token", response.data.token); 
+        localStorage.setItem("userid", response.data.userid);
+
+        // fetch user details
+        const userDetailsResponse = await axios.get(
+          `http://localhost:5000/api/user/getuser/${response.data.userid}`,
+          {
+            headers: { Authorization: `Bearer ${response.data.token}` }
+          }
+        );
+        setUser(userDetailsResponse.data);
+
         alert("Login successful");
         navigate(parseInt(formData.usertype) === 0 ? "/home" : "/home");
       }

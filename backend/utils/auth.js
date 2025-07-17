@@ -6,11 +6,11 @@ const SECRET_KEY = process.env.SECRET_KEY;
 
 //FUNCTION TO AUTHENTICATE USERNAME AND ASSOCIATED PASSWORD
 const authenticateuser = (req, res, next) => {
-	const authHeader = req.headers.authorization;
-	const username =  req.body.email;
-	const inputPassword = req.body.password;
-	const usertype = req.body.usertype;
- 
+	const authHeader = req?.headers?.authorization;
+	const username =  req?.body?.email;
+	const inputPassword = req?.body?.password;
+	const usertype = req?.body?.usertype;
+	
 	if ((!username || !inputPassword) && !authHeader) {
 		return res.status(401).send("Unauthorized request! Please provide credentials or a valid token to proceed.");
 	}
@@ -21,7 +21,8 @@ const authenticateuser = (req, res, next) => {
 		const token = authHeader.split(" ")[1];
 		try { 
 			req.user = jwt.verify(token, SECRET_KEY);
-			req.query.userid = req.body.userid = req.user.id;
+			req["query"]["userid"] = req.user.id;
+			// req["body"]["userid"] = req.user.id;
 			return next();
 		} catch (err) {
 			console.log(err)

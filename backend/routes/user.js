@@ -100,7 +100,7 @@ router.post("/signup", async (req, res) => {
 router.post("/signin", authenticateuser, (req, res) => {
 	const token = jwt.sign({id: req.body.userid, username: req.body.username}, SECRET_KEY, {expiresIn: "1h"});
 	// console.log('login token:', token)
-	return res.json({token});
+	return res.json({token, userid:req.body.userid});
 });
  
 //to reset password
@@ -146,13 +146,15 @@ router.patch("/email/:id", authenticateuser, (req, res) => {
 });
 
 //Need to add authorization logic to let only admins access this api
-router.get("/getuser/:id", (req, res) => {
-    const query = `SELECT username, email, phone, createddate, modifieddate, isactive FROM users WHERE id = ?`;
+router.get("/getuser/:id", authenticateuser, (req, res) => {
+
+	if(!req.query.userid === req.params.id) 
+		return res.status(403).send("Unauthorized Access");
+    const query = `SELECT full_name, phone, email, usertype FROM users WHERE id = ?`;
     const params = [req.params.id];
 
     db.query(query, params)
         .then(results => {
-            console.log(results);
             if (results.length === 0) return res.status(404).send("User not found");
             res.status(200).json(results[0]);
         })
