@@ -1,0 +1,45 @@
+.pricing-wrapper {
+  padding: 20px;
+  background: #fff;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.pricing-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.pricing-form select,
+.pricing-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.pricing-form button {
+  padding: 10px 15px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.current-pricing {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.current-pricing p {
+  margin: 0;
+  flex-grow: 1;
+}
+
+.edit, .delete {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}

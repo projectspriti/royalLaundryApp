@@ -1,0 +1,8 @@
+.vendor-dashboard {
+  display: flex;
+}
+
+.main-content {
+  margin-left: 250px;
+  width: 100%;
+}
