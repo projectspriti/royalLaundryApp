@@ -18,7 +18,7 @@ const Navbar = ({user, setUser}) => {
   }, [location]); // Re-check on route changes
 
   useEffect(() => {
-    if(user.email || !localStorage.getItem('token'))
+    if(user?.email || !localStorage.getItem('token'))
       return;
 
     const token = localStorage.getItem('token');
@@ -123,9 +123,9 @@ const Navbar = ({user, setUser}) => {
               <Dropdown show>
                 <Dropdown.Menu className="p-3 shadow border-0" style={leftDropdownStyle}>
                   <div className="mb-3">
-                    <p className="mb-1 fw-bold">{user.full_name ?? ''}</p>
-                    <p className="mb-1 text-muted small">{user.email ?? ''}</p>
-                    <p className="mb-0 text-muted small">{user.phone ?? ''}</p>
+                    <p className="mb-1 fw-bold">{user?.full_name ?? ''}</p>
+                    <p className="mb-1 text-muted small">{user?.email ?? ''}</p>
+                    <p className="mb-0 text-muted small">{user?.phone ?? ''}</p>
                   </div>
                   <Dropdown.Item as={Link} to="/profile" onClick={() => setShowProfileDropdown(false)}>
                     <svg className="me-2" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
