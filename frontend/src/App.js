@@ -131,12 +131,13 @@ import Contact from './pages/Contact';
 import SelectedList from './pages/SelectedList';
 import CustomerDashboard from './pages/Customer_dash';
 import VendorDashboard from './pages/Vendor_dash';
+import AdminDashboard from './pages/AdminDashboard'
 
 const App = () => {
   const location = useLocation();
 
   // Hide Navbar and Footer only on these dashboard routes
-  const hideLayout = location.pathname === '/dashboard' || location.pathname === '/vendor/dashboard';
+  const hideLayout = location.pathname === '/dashboard' || location.pathname === '/vendor/dashboard' || location.pathname === '/admin/dashboard';
 
   return (
     <div>
@@ -157,6 +158,8 @@ const App = () => {
         {/* Static dashboards (no Navbar/Footer) */}
         <Route path="/dashboard" element={<CustomerDashboard />} />
         <Route path="/vendor/dashboard" element={<VendorDashboard />} />
+             <Route path='/admin/dashboard' element={<AdminDashboard />} />        
+
       </Routes>
 
       {!hideLayout && <Footer />}

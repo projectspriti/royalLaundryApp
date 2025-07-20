@@ -1,30 +1,17 @@
-/* .vendor-dashboard {
-  display: flex;
-}
-
-.main-content {
-  margin-left: 250px;
-  width: 100%;
-} */
-
-
-
-/* Layout setup */
 .vendor-dashboard {
   display: flex;
-  min-height: 100vh;
-  background-color: #f7f9fc;
+  height: 100vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f9fc;
+  overflow: hidden;
 }
 
 .main-content {
-  margin-left: 250px; /* Assuming sidebar width */
+  flex-grow: 1;
   padding: 20px;
-  width: calc(100% - 250px);
-  box-sizing: border-box;
+  overflow-y: auto;
 }
 
-/* Tab buttons */
 .tab-buttons {
   display: flex;
   gap: 15px;
@@ -51,7 +38,6 @@
   font-weight: bold;
 }
 
-/* Tab content wrapper */
 .tab-content {
   background-color: #ffffff;
   padding: 20px;

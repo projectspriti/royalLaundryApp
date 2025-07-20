@@ -1,28 +1,4 @@
-/* .orders-section {
-  margin-top: 30px;
-}
-
-.orders-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-}
-
-.orders-table th,
-.orders-table td {
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: center;
-}
-
-.orders-table th {
-  background-color: #f2f2f2;
-  font-weight: bold;
-} */
-
-
-
-.customer-orders-wrapper {
+.vendor-orders-wrapper {
   padding: 30px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
