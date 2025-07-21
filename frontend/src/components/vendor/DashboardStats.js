@@ -1,3 +1,4 @@
+// src/components/vendor/DashboardStats.jsx
 import React from 'react';
 import { FaShoppingCart, FaClock, FaCheckCircle, FaRupeeSign } from 'react-icons/fa';
 import '../../styles/vendor/dashboard_stats.css';
@@ -18,7 +19,9 @@ const DashboardStats = () => {
             <span className="stat-label">{stat.label}</span>
             <span className="stat-value">{stat.value}</span>
           </div>
-          {stat.icon}
+          <div className="stat-icon-wrapper">
+            {stat.icon}
+          </div>
         </div>
       ))}
     </div>

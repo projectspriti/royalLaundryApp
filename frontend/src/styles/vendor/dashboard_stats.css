@@ -1,9 +1,12 @@
+/* src/styles/vendor/dashboard_stats.css */
+
 .stats-container {
   display: flex;
   gap: 20px;
   padding: 20px;
   flex-wrap: wrap;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .stat-card {
@@ -12,7 +15,7 @@
   background: #f9f9f9;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,7 +23,7 @@
 }
 
 .stat-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-5px);
 }
 
 .stat-text {
@@ -32,7 +35,7 @@
 .stat-label {
   font-size: 16px;
   font-weight: 500;
-  color: #222;
+  color: #333;
 }
 
 .stat-value {
@@ -42,10 +45,17 @@
   margin-top: 6px;
 }
 
-.stat-icon {
-  font-size: 25px;
-  color: #2da7ff;
+.stat-icon-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px;
+  border-radius: 50%;
 }
+
+.stat-icon {
+  font-size: 45px;
+  color: #2da7ff;
+}
+
+

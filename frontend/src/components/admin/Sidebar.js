@@ -4,7 +4,7 @@ import '../../styles/admin/sidebar.css';
 
 const Sidebar = () => {
   return (
-    <div className="admin-sidebar">
+    <div className="admin-sidebar" style={{backgroundColor:"#471396"}}>
       <div className="sidebar-top">
         <h2 className="logo">RoyalLaundry</h2>
         <div className="admin-info">
