@@ -6,7 +6,7 @@ const Sidebar = () => {
   return (
     <div className="admin-sidebar">
       <div className="sidebar-top">
-        <h2 className="logo">🧺 LaundryHub</h2>
+        <h2 className="logo">RoyalLaundry</h2>
         <div className="admin-info">
           <p className="username">admin</p>
           <p className="role">Admin</p>

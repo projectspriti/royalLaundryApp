@@ -132,12 +132,13 @@ import SelectedList from './pages/SelectedList';
 import CustomerDashboard from './pages/Customer_dash';
 import VendorDashboard from './pages/Vendor_dash';
 import AdminDashboard from './pages/AdminDashboard'
+import ServiceDetails from './pages/ServiceDetails';
 
 const App = () => {
   const location = useLocation();
 
   // Hide Navbar and Footer only on these dashboard routes
-  const hideLayout = location.pathname === '/dashboard' || location.pathname === '/vendor/dashboard' || location.pathname === '/admin/dashboard';
+  const hideLayout = location.pathname === '/customer/dashboard' || location.pathname === '/vendor/dashboard' || location.pathname === '/admin/dashboard';
 
   return (
     <div>
@@ -146,6 +147,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/services/:serviceSlug" element={<ServiceDetails />} />
         <Route path="/orders" element={<Orders />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/book-order" element={<BookOrder />} />
@@ -156,7 +158,7 @@ const App = () => {
         <Route path="/selectedList" element={<SelectedList />} />
 
         {/* Static dashboards (no Navbar/Footer) */}
-        <Route path="/dashboard" element={<CustomerDashboard />} />
+        <Route path="/customer/dashboard" element={<CustomerDashboard />} />
         <Route path="/vendor/dashboard" element={<VendorDashboard />} />
              <Route path='/admin/dashboard' element={<AdminDashboard />} />        
 
