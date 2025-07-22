@@ -23,6 +23,7 @@ app.use('/api/location', locations);
 app.use('/api/user', user);
 app.use('/api/otp', otp)
 
+
 app.get('/', (req, res) => {
   res.send('Laundry Service API is running');
 });

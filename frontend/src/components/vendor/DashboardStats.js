@@ -1,4 +1,3 @@
-// src/components/vendor/DashboardStats.jsx
 import React from 'react';
 import { FaShoppingCart, FaClock, FaCheckCircle, FaRupeeSign } from 'react-icons/fa';
 import '../../styles/vendor/dashboard_stats.css';

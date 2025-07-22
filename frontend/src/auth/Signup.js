@@ -222,7 +222,6 @@ const Signup = () => {
   const sendOtp = async () => {
     try {
       const otpResponse = await axios.post("http://localhost:5000/api/otp/send/email-verify", { email: formData.email, usertype:formData.usertype });
-
       if (otpResponse.status === 200) {
         setShowOtpModal(true); // Show OTP modal 
       }

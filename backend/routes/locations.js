@@ -9,10 +9,10 @@ const query_sel_location = `
         s.name AS state,
         "India" AS country
     FROM 
-        ads.pincodes p
-        JOIN ads.cities c ON p.city_id = c.id
-        JOIN ads.districts d ON c.district_id = d.id
-        JOIN ads.states s ON d.state_id = s.id
+        pincodes p
+        JOIN cities c ON p.city_id = c.id
+        JOIN districts d ON c.district_id = d.id
+        JOIN states s ON d.state_id = s.id
     WHERE 
         p.pincode = ?
     LIMIT 1;
@@ -20,6 +20,8 @@ const query_sel_location = `
 
 router.get('/:pincode', async (req, res) => {
     const pincode = req.params.pincode;
+    console.log("pincode" , pincode);
+    
 
     //vealidate pincode
     if (!pincode || pincode.length !== 6 || isNaN(pincode)) {

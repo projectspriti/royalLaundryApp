@@ -1,5 +1,5 @@
-
 import React, { useState } from 'react';
+import serviceData from '../../context/service.json';
 import '../../styles/vendor/pricing.css';
 
 const PricingManagement = () => {
@@ -40,22 +40,32 @@ const PricingManagement = () => {
       <div className="pricing-form">
         <div>
           <label>Cloth Type</label>
-          <select value={clothType} onChange={(e) => setClothType(e.target.value)}>
+          <select
+            value={clothType}
+            onChange={(e) => {
+              setClothType(e.target.value);
+              setServiceType('');
+            }}
+          >
             <option value="">Select cloth type</option>
-            <option value="Shirt">Shirt</option>
-            <option value="Pant">Pant</option>
-            <option value="Saree">Saree</option>
-            <option value="Towel">Towel</option>
+            {Object.keys(serviceData).map((cloth, index) => (
+              <option key={index} value={cloth}>{cloth}</option>
+            ))}
           </select>
         </div>
 
         <div>
           <label>Service Type</label>
-          <select value={serviceType} onChange={(e) => setServiceType(e.target.value)}>
+          <select
+            value={serviceType}
+            onChange={(e) => setServiceType(e.target.value)}
+            disabled={!clothType}
+          >
             <option value="">Select service type</option>
-            <option value="Washing">Washing</option>
-            <option value="Ironing">Ironing</option>
-            <option value="Dry Cleaning">Dry Cleaning</option>
+            {clothType &&
+              Object.keys(serviceData[clothType]).map((service, index) => (
+                <option key={index} value={service}>{service}</option>
+              ))}
           </select>
         </div>
 
@@ -63,7 +73,7 @@ const PricingManagement = () => {
           <label>Price (₹)</label>
           <input
             type="number"
-            placeholder="Enter price"
+            placeholder="Enter your price"
             value={price}
             onChange={(e) => setPrice(e.target.value)}
           />
@@ -105,4 +115,3 @@ const PricingManagement = () => {
 };
 
 export default PricingManagement;
-

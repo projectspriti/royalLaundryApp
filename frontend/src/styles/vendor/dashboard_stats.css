@@ -1,5 +1,3 @@
-/* src/styles/vendor/dashboard_stats.css */
-
 .stats-container {
   display: flex;
   gap: 20px;
@@ -46,16 +44,18 @@
 }
 
 .stat-icon-wrapper {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
+ 
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
-  border-radius: 50%;
 }
 
 .stat-icon {
-  font-size: 45px;
+  font-size: 24px;
   color: #2da7ff;
 }
-
-

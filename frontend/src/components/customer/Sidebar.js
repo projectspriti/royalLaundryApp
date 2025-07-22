@@ -3,7 +3,7 @@ import { FaHome, FaPlus, FaListAlt, FaUser, FaSignOutAlt } from 'react-icons/fa'
 import { useNavigate } from 'react-router-dom';
 import '../../styles/customer/sidebar.css';
 
-const Sidebar = () => {
+const Sidebar = ({ setActiveTab }) => {
   const navigate = useNavigate();
 
   return (
@@ -20,16 +20,16 @@ const Sidebar = () => {
     </div>
 
     <ul className="nav-links">
-      <li onClick={() => navigate('/dashboard')}>
+      <li onClick={() => setActiveTab('dashboard')}>
         <FaHome /> Dashboard
       </li>
-      <li onClick={() => navigate('/book-order')}>
+      <li onClick={() => setActiveTab('place-order')}>
         <FaPlus /> Place Order
       </li>
-      <li onClick={() => navigate('/orders')}>
+      <li onClick={() => setActiveTab('my-orders')}>
         <FaListAlt /> My Orders
       </li>
-      <li onClick={() => navigate('/profile')}>
+      <li onClick={() => setActiveTab('profile')}>
         <FaUser /> Profile
       </li>
     </ul>
