@@ -64,7 +64,13 @@ const ForgotPassword = () => {
             setTimeout(() => navigate('/login'), 2000);
         } catch (error) {
             setMessageType("error");
-            setMessage(error.response?.data || "An error occurred. Please try again.");
+            // setMessage(error.response?.data || "An error occurred. Please try again.");
+            setMessage(
+                typeof error.response?.data === "string"
+                    ? error.response.data
+                    : error.response?.data?.error || "An error occurred. Please try again."
+            );
+
         } finally {
             setIsLoading(false);
         }

@@ -30,7 +30,7 @@ const App = () => {
       {!hideLayout && <Navbar />}
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<><Home /></>} />
         <Route path="/services" element={<Services />} />
         <Route path="/services/:serviceSlug" element={<ServiceDetails />} />
         <Route path="/orders" element={<Orders />} />
