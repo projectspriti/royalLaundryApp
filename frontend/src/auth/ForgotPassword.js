@@ -35,7 +35,14 @@ const ForgotPassword = () => {
             setActiveTab('reset'); // Switch to reset tab after successful token request
         } catch (error) {
             setMessageType("error");
-            setMessage(error.response?.data || "An error occurred. Please try again.");
+            // setMessage(error.response?.data || "An error occurred. Please try again.");
+            setMessage(
+                typeof error.response?.data === "string"
+                    ? error.response.data
+                    : error.response?.data?.error || "An error occurred. Please try again."
+            );
+            console.error(error.response?.data);
+
         } finally {
             setIsLoading(false);
         }
