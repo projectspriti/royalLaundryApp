@@ -25,7 +25,7 @@ const Signin = ({setUser}) => {
     setIsLoading(true);
 
     try {
-      const response = await axios.post("http://localhost:5000/api/user/signin", formData);
+      const response = await axios.post("/api/user/signin", formData);
 
       if (response.data.token) { 
         localStorage.setItem("token", response.data.token); 
@@ -33,7 +33,7 @@ const Signin = ({setUser}) => {
 
         // fetch user details
         const userDetailsResponse = await axios.get(
-          `http://localhost:5000/api/user/getuser/${response.data.userid}`,
+          `/api/user/getuser/${response.data.userid}`,
           {
             headers: { Authorization: `Bearer ${response.data.token}` }
           }
@@ -41,7 +41,7 @@ const Signin = ({setUser}) => {
         setUser(userDetailsResponse.data);
 
         alert("Login successful");
-        navigate(parseInt(formData.usertype) === 0 ? "/home" : "/home");
+        navigate(parseInt(formData.usertype) === 0 ? "/" : "/");
       }
     } catch (error) {
       console.log(error);

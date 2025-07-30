@@ -51,12 +51,12 @@ router.post("/signup", async (req, res) => {
     }
 
 	//Check if username already exists
-	const query_username = `SELECT * FROM users WHERE email =? and usertype=? and is_active=1`;
+	const queryuser = `SELECT * FROM users WHERE email =? and usertype=? and is_active=1`;
 	
 	try {
-		const users = await db.query(query_username, [email, usertype])
+		const users = await db.query(queryuser, [email, usertype])
 		if (users.length > 0) 
-			return res.status(409).send("Email or Phone Already Taken!!!");
+			return res.status(409).send("Email Already registered. Please Login!!!");
 
 	} catch (error) {
 		console.log(error);
@@ -66,9 +66,6 @@ router.post("/signup", async (req, res) => {
 	const salt = bcrypt.genSaltSync();
 	const hashedPassword = bcrypt.hashSync(password, salt);
 
-	const querycheck = `
-	SELECT * FROM users WHERE email =? and usertype =? and is_active =1
-	`;
 	const queryinsert = `
 	INSERT INTO users ( email, phone, password, full_name, address, pincode, usertype) 
 	VALUES ( ?, ?, ?, ?, ?, ?, ?)
@@ -78,12 +75,6 @@ router.post("/signup", async (req, res) => {
 	const insertparams = [ email, phone, hashedPassword, fullname, address, pincode, usertype];
 
 	try {
-		const users = await db.query(querycheck, [email, usertype])
-		if (users.length > 0) {
-			return res.status(200).send("User Already Exists!!!");
-		}
-
-
 		const result = await db.query(queryinsert, insertparams) 
 		if (result.insertId) 
 			return res.status(201).send("User Successfully Created. Proceed to OTP activation.");

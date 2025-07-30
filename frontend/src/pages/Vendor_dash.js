@@ -42,7 +42,7 @@
 
 // vendor_dash.js
 // vendor_dash.js
-import React, { useState } from 'react';
+import React, { use, useState } from 'react';
 import Sidebar from '../components/vendor/Sidebar';
 import Topbar from '../components/vendor/Topbar';
 import DashboardStats from '../components/vendor/DashboardStats';
@@ -51,19 +51,19 @@ import OrdersSection from '../components/vendor/OrderSection';
 import Profile from '../components/vendor/Profile';
 import '../styles/vendor/vendor_dash.css';
 
-const Vendor_dash = () => {
+const Vendor_dash = ({user, setUser, setIsLoggedIn}) => {
   const [activeTab, setActiveTab] = useState('dashboard'); // default view
 
   return (
     <div className="vendor-dashboard">
-      <Sidebar setActiveTab={setActiveTab} />
+      <Sidebar setActiveTab={setActiveTab} user={user} setUser={setUser} />
       <div className="main-content">
-        <Topbar />
+        <Topbar user={user} setUser={setUser} setIsLoggedIn={setIsLoggedIn}/>
 
         {/* Render based on active tab */}
         {activeTab === 'dashboard' && <DashboardStats />}
         {activeTab === 'orders' && <OrdersSection />}
-        {activeTab === 'add-service' && <PricingManagement />} {/* shown under Add Services */}
+        {activeTab === 'add-service' && <PricingManagement user={user} />} {/* shown under Add Services */}
         {activeTab === 'profile' && <Profile />}
       </div>
     </div>

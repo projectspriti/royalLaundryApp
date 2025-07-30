@@ -23,7 +23,7 @@ router.get('/:pincode', async (req, res) => {
     console.log("pincode" , pincode);
     
 
-    //vealidate pincode
+    //validate pincode
     if (!pincode || pincode.length !== 6 || isNaN(pincode)) {
         return res.status(400).json({ error: "Invalid pincode" });
     }

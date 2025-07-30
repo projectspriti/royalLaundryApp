@@ -159,7 +159,7 @@ const Signup = () => {
   };
   const handlePincodeButton = async () => {
     try {
-      const regiondata = await axios.get(`http://localhost:5000/api/location/${formData.pincode}`)
+      const regiondata = await axios.get(`/api/location/${formData.pincode}`)
       console.log("regiondata", regiondata.data);
 
       if (regiondata.data.city && regiondata.data.district && regiondata.data.state) {
@@ -204,7 +204,7 @@ const Signup = () => {
     }
 
     try {
-      await axios.post("http://localhost:5000/api/user/signup", formData);
+      await axios.post("/api/user/signup", formData);
       sendOtp();
     } catch (error) {
       console.log(error.response)
@@ -221,7 +221,7 @@ const Signup = () => {
 
   const sendOtp = async () => {
     try {
-      const otpResponse = await axios.post("http://localhost:5000/api/otp/send/email-verify", { email: formData.email, usertype:formData.usertype });
+      const otpResponse = await axios.post("/api/otp/send/email-verify", { email: formData.email, usertype:formData.usertype });
       if (otpResponse.status === 200) {
         setShowOtpModal(true); // Show OTP modal 
       }
@@ -239,7 +239,7 @@ const Signup = () => {
   const handleVerifyOtp = async () => {
     setIsVerifyLoading(true); // Set loading state to true
     try {
-      const response = await axios.post("http://localhost:5000/api/otp/validate/email-verify", { email: formData.email, otp: userOtp, usertype:formData.usertype });
+      const response = await axios.post("/api/otp/validate/email-verify", { email: formData.email, otp: userOtp, usertype:formData.usertype });
 
       if (response.status === 201) {
         setShowOtpModal(false); // Hide OTP modal
@@ -285,8 +285,8 @@ const Signup = () => {
                 onChange={handleInputChange}
                 required
               >
-                <option value="1">Customer</option>
-                <option value="2">Vendor</option>
+                <option value="0">Customer</option>
+                <option value="1">Vendor</option>
               </select>
             </div>
 

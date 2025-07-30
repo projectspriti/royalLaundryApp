@@ -27,7 +27,7 @@ const ForgotPassword = () => {
         setMessage("");
 
         try {
-            const response = await axios.post("http://localhost:5000/api/otp/send/password-reset", {
+            const response = await axios.post("/api/otp/send/password-reset", {
                 email: formData.email, usertype: formData.usertype
             });
             setMessageType("success");
@@ -53,7 +53,7 @@ const ForgotPassword = () => {
         setMessage("");
 
         try {
-            const response = await axios.post("http://localhost:5000/api/otp/validate/password-reset", {
+            const response = await axios.post("/api/otp/validate/password-reset", {
                 usertype: formData.usertype,
                 email: formData.email,
                 otp: formData.token,

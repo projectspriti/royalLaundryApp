@@ -52,17 +52,17 @@ import { FaHome, FaPlus, FaListAlt, FaUser, FaSignOutAlt } from 'react-icons/fa'
 import { useNavigate } from 'react-router-dom';
 import '../../styles/vendor/sidebar.css';
 
-const Sidebar = ({ setActiveTab }) => {
+const Sidebar = ({ setActiveTab, user, setUser }) => {
   const navigate = useNavigate();
 
   return (
     <div className="vendor-sidebar">
       <div className="sidebar-content">
-        <h2 className="logo">RoyalLaundry</h2>
+        <a href='/'><h2 className="logo">RoyalLaundry</h2></a>
         <div className="profile">
           <div className="avatar">👤</div>
           <div>
-            <p className="username">johndoe</p>
+            <p className="username">{user.full_name}</p>
             <p className="role">Vendor</p>
           </div>
         </div>

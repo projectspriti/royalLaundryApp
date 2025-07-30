@@ -20,11 +20,11 @@ router.post("/send/password-reset", async (req, res) => {
 
 		try {
 			const query = `
-        		insert into user_otps (user_id, otp_code, email, created_at, expires_at, purpose) 
-        		values (?, ?, ?, now(), now() + interval 10 minute, 'password_reset')
+        		insert into user_otps (usertype, user_id, otp_code, email, created_at, expires_at, purpose) 
+        		values (?, ?, ?, ?, now(), now() + interval 10 minute, 'password_reset')
         		on duplicate key update otp_code=values(otp_code), created_at=values(created_at), expires_at=values(expires_at), is_used=0;
         	`;
-			const params = [users[0].id, otp, email];
+			const params = [usertype, users[0].id, otp, email];
 			await db.query(query, params);
 
       await sendEmail(
@@ -55,13 +55,13 @@ router.post("/validate/password-reset", async (req, res) => {
 
   //verify that user exists
   const queryuser = `select * from users where email =? and usertype=?;`;
-  const queryotp = `select * from user_otps where otp_code =? and user_id =? and expires_at > now() and is_used=0;`;
+  const queryotp = `select * from user_otps where otp_code =? and usertype = ? and user_id =? and expires_at > now() and is_used=0;`;
 
   try {
     const users = await db.query(queryuser, [email, usertype]);
     if (users.length === 0) return res.status(404).send("User not found!");
 
-    await db.query(queryotp, [otp, users[0].id]);
+    await db.query(queryotp, [otp, usertype, users[0].id]);
     
     //hash password
     const salt = bcrypt.genSaltSync();
@@ -96,16 +96,19 @@ router.post('/send/email-verify', async (req, res) => {
 
         //verify that user exists
         const queryuser = `select * from users where email = ? and usertype = ? and is_active=0;`;
+        console.log([email, usertype])
         const users = await db.query(queryuser, [email, usertype]);
+        console.log(users)
         if (users.length < 1) return res.status(404).send("Unable to Send OTP. Server Error!!!");
 
         const query = `
-        insert into user_otps (user_id, otp_code, email, created_at, expires_at) 
-        values (?, ?, ?, now(), now() + interval 10 minute)
+        insert into user_otps (usertype, user_id, otp_code, email, created_at, expires_at) 
+        values (?, ?, ?, ?, now(), now() + interval 10 minute)
         on duplicate key update otp_code=values(otp_code), created_at=values(created_at), expires_at=values(expires_at), is_used=0;
         `;
-        const params = [users[0].id, otp, email];
+        const params = [usertype, users[0].id, otp, email];
         await db.query(query, params);
+        console.log(params)
     }catch (error) {
         return res.status(500).json({error: error.message});
     }
@@ -136,8 +139,8 @@ router.post('/validate/email-verify', async (req, res) => {
       const users = await db.query(queryuser, [email, usertype]);
       if (users.length < 1) return res.status(404).send("Unable to Validate OTP. Server Error!!!");
       // Check if OTP is valid
-      const query = `select id from user_otps where otp_code = ? and user_id = ? and purpose='registration' and expires_at > now() and is_used=0;  `;
-      const params = [otp, users[0].id];
+      const query = `select id from user_otps where otp_code = ? and usertype = ? and user_id = ? and purpose='registration' and expires_at > now() and is_used=0;  `;
+      const params = [otp, usertype, users[0].id];
       console.log(params)
       const result = await db.query(query, params);
       console.log(result)
@@ -154,7 +157,7 @@ router.post('/validate/email-verify', async (req, res) => {
       }
 
       if (result.length === 0) {
-        return res.status(400).json({ error: 'Invalid OTP or OTP has expired' });
+        return res.status(400).send('Invalid OTP or OTP has expired');
       }
       // OTP is valid, proceed with registration
       res.status(201).json({ message: 'OTP verified successfully. Account has been Activated!' });

@@ -10,7 +10,7 @@ const authenticateuser = (req, res, next) => {
 	const username =  req?.body?.email;
 	const inputPassword = req?.body?.password;
 	const usertype = req?.body?.usertype;
-	
+	console.log(req.body)
 	if ((!username || !inputPassword) && !authHeader) {
 		return res.status(401).send("Unauthorized request! Please provide credentials or a valid token to proceed.");
 	}
